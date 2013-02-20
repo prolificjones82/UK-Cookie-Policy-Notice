@@ -1,3 +1,11 @@
+/*
+ *
+ *	Report all issues on the plugins GitHub page (https://github.com/prolificjones82/uk_cookie_policy_notice)
+ *	or via email (mail@leejones.me.uk)
+ *
+*/
+
+
 function setCookie(c_name,c_value,c_expiredays) {
     var exdate=new Date();
     exdate.setDate(exdate.getDate()+c_expiredays);
