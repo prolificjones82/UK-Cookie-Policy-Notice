@@ -70,4 +70,4 @@ If you have done it correctly your page should look something like this:
 ##Licence
 
 Copyright (c) 2013 Lee Jones
-Licensed under GNU Lesser General Public License.
+Licensed none.
