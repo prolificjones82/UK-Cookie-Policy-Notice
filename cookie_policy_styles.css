@@ -1,0 +1,48 @@
+#cookie_container { 
+  visibility: hidden; /* DO NOT EDIT THIS PROPERTY */
+	font-family: sans-serif; 
+	font-size: 12px;
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	right: 0; 
+	background: rgba(0,0,0,0.8); 
+	color: #FFF; 
+	padding: 10px;
+	box-shadow: 0 0 10px #000;
+	border-top: solid 1px #CCC;
+}
+
+.policy_wrapper {
+	width: 55%;
+	margin: 0 auto;
+}
+
+.leftcontainer {
+	float: left;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.button {
+	float: right;
+	padding: 5px 10px;
+	background: #CCC;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+	transition: all 0.5s; 
+	-webkit-transition: all 0.5s; 
+	-moz-transition: all 0.5s; 
+	-o-transition: all 0.5s;
+}
+
+.button:hover {
+	background: #999;
+	color: #FFF;
+	transition: all 0.5s; 
+	-webkit-transition: all 0.5s; 
+	-moz-transition: all 0.5s; 
+	-o-transition: all 0.5s;
+}
