@@ -71,5 +71,5 @@ If you have done it correctly your page should look something like this:
 
 ##Licence
 
-Copyright (c) 2013 Lee Jones
-Licensed none.
+Copyright (c) 2013 Lee Jones, 
+License none.
