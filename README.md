@@ -8,7 +8,7 @@ Updated in May 2012, the ICO set out the changes to the cookies law and explains
 - You should not rely on the fact that users might have read a privacy policy that is perhaps hard to find or difficult to understand.
 - In some circumstances, for example where you are collecting sensitive personal data such as health information, you might feel that explicit consent is more appropriate.
 
-This small plugin ensure your website conforms to these guidlines.
+This small plugin ensure your website conforms to these guidelines.
 
 ##How to use
 
