@@ -69,7 +69,11 @@ If you have done it correctly your page should look something like this:
 </html>
 ```
 
+##Thanks & Donations
+
+If you find this script so amazing you want to thank me, please feel free to make a small donation on my <a href="http://leejones.me.uk" target="_blank">website</a>.
+
+
 ##Licence
 
-Copyright (c) 2013 Lee Jones, 
-License none.
+Copyright (c) 2013 Lee Jones, License none.
