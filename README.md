@@ -1,4 +1,4 @@
-#UK Cookie Policy Notice v2.0
+#UK Cookie Policy Notice v2.1.0
 *A simple plugin to notify users you adhere to the UK's cookie policies*
 
 Updated in May 2012, the ICO set out the changes to the cookies law and explains the steps you need to take to ensure you comply. The updated guidance provides additional information around the issue of implied consent:
@@ -14,15 +14,15 @@ This small plugin ensure your website conforms to these guidelines. It works by 
 
 ##How to use
 
-Upload `jquery.cookie.policy.js` and `cookie_policy_styles.css` to your server and link to them in your page.
-Add `cookie_policy_styles.css` in between your head tags. You will then need to add jQuery and the `jquery.cookie.policy.js` at the bottom of your page, jst before the closing `</body>` tag.
+Upload `jquery.cookie.policy.js` to your server.
+You will then need to add jQuery and the `jquery.cookie.policy.js` at the bottom of your page, just before the closing `</body>` tag.
 
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="cookie_policy_functions.js"></script>
 ```
 
-To activate the plugin you will need to add one final snippet into you `$(document).ready();` function. In full you will end up with something that looks like this at the bottom of your page.
+To activate the plugin you will need to add one final snippet into your `$(document).ready();` function. In full you will end up with something that looks like this at the bottom of your page.
 
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -41,12 +41,16 @@ I have added a few options to aid in customizing the plugin.
 ```html
 <script>
 $('body').cookiePolicy({
-	text: '', // Changes the advice text for the warning.
-	btnText: '', // Changes the text on the Agree button.
-	bgColor: '', // Background colour for the popup bar, accepts HEX and RGBA.
-	textColor: '', // Text colour for popup bar, accepts HEX and RGBA.
-	btnColor: '', // Accept button background colour, accepts HEX and RGBA.
-	btnTextColor: '' // Accept button text colour, accepts HEX and RGBA.
+	text: '', // information text
+	btnText: '', // agree button text
+	bgColor: '', // main info bar background colour, accepts HEX or RGBA
+	textColor: '', // main info bar text colour, accepts HEX or RGBA
+	btnColor: '', // button background colour, accepts HEX or RGBA
+	btnTextColor: '', // button text colour, accepts HEX or RGBA
+	position: '', // info bar position
+	leftPadding: '', // info bar left spacing, accepts px or % values
+	rightPadding: '', // info bar right spacing, accepts px or % values
+	hideAnimation: '' // on click hide animation, options are fadeOut, slideUp
 });
 </script>
 ```

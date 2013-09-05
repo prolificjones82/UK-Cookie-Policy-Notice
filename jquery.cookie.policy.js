@@ -117,25 +117,35 @@
 		
 		// plugin options
 		var options = $.extend({
-			text: 'We use cookies on this website, by continuing to be here we will take it you agree to us using them.',
-			btnText: 'I Agree',
-			bgColor: '#CCC',
-			textColor: '#000',
-			btnColor: '#000',
-			btnTextColor: '#FFF'
+			text: 'We use cookies on this website, by continuing to be here we will take it you agree to us using them.', // information text
+			btnText: 'I Agree', // agree button text
+			bgColor: '#CCC', // main info bar background colour, accepts HEX or RGBA
+			textColor: '#000', // main info bar text colour, accepts HEX or RGBA
+			btnColor: '#000', // button background colour, accepts HEX or RGBA
+			btnTextColor: '#FFF', // button text colour, accepts HEX or RGBA
+			position: 'top', // info bar position
+			leftPadding: '0', // info bar left spacing, accepts px or % values
+			rightPadding: '0', // info bar right spacing, accepts px or % values
+			hideAnimation: 'fadeOut' // on click hide animation, options are fadeOut, slideUp
 		}, options);
+		
+		// create stylesheet
+		$('head').append('<style>#cookie_container { display: none; position: absolute; ' + options.position + ': 0; left: ' + options.leftPadding + '; 	right: ' + options.rightPadding + '; z-index: 999; padding: 10px; background-color:' + options.bgColor + '; color:' + options.textColor + '; } .cookie_inner { width: 90%; margin: 0 auto; } .cookie_inner p { margin: 0; padding-top: 4px; } #setCookie { float: right; padding: 5px 10px; text-decoration: none; background-color: '+ options.btnColor +'; color: '+ options.btnTextColor +'; } #setCookie:hover { background-color: #AAAAAA !important; color: #000000 !important; }</style>');
 		
 		// create popup elements
 		$(this).prepend(
-			// stuff in here
-			$(this).html('<div id="cookie_container" style="display:none; background-color:' + options.bgColor + '; color:' + options.textColor + ';"><div class="cookie_inner"><a style="background-color: '+ options.btnColor +'; color: '+ options.btnTextColor +';" id="setCookie" href="#">' + options.btnText + '</a><p>' + options.text + '</p></div></div>')
+			$(this).html('<div id="cookie_container"><div class="cookie_inner"><a id="setCookie" href="#">' + options.btnText + '</a><p>' + options.text + '</p></div></div>')
 		);
 		
 		// set cookie function
 		$(document.body).on('click', '#setCookie', function(e) {
 			e.preventDefault();
 			$.cookie('cookie_policy', 'true', { expires: 365, path: '/' });
-			$('#cookie_container').fadeOut();
+			if (options.hideAnimation == 'fadeOut') {
+				$('#cookie_container').fadeOut();
+			} else if (options.hideAnimation == 'slideUp') {
+				$('#cookie_container').slideUp();
+			}
 		});
 
 		// detect cookie
