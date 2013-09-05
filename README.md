@@ -1,4 +1,4 @@
-#UK Cookie Policy Notice
+#UK Cookie Policy Notice v2
 *A simple plugin to notify users you adhere to the UK's cookie policies*
 
 Updated in May 2012, the ICO set out the changes to the cookies law and explains the steps you need to take to ensure you comply. The updated guidance provides additional information around the issue of implied consent:
@@ -14,64 +14,48 @@ This small plugin ensure your website conforms to these guidelines. It works by 
 
 ##How to use
 
-Upload `cookie_policy_functions.js` and `cookie_policy_styles.css` to your server and link to them in the head tags of your home page.
+Upload `jquery.cookie.policy.js` and `cookie_policy_styles.css` to your server and link to them in your page.
+Add `cookie_policy_styles.css` in between your head tags. You will then need to add jQuery and the `jquery.cookie.policy.js` at the bottom of your page, jst before the closing `</body>` tag.
 
 ```html
-<script type="text/javascript" src="cookie_policy_functions.js"></script>
-<link rel="stylesheet" type="text/css" href="cookie_policy_styles.css" />
-```
-
-You will need to add an `onload` element to your body tag for the plugin to work properly.
-
-```html
-<body onload="getCookie('cookie_policy');">
-```
-
-Finally, just under your edited body tag drop in the code found in `cookie_policy_snippet.html`.
-
-```html
-<div id="cookie_container">
-  <div class="policy_wrapper">
-  	<div class="leftcontainer">
-			We use cookies on this website, by continuing to be here we will take it you agree to us using them.
-		</div>
-
-		<a class="button" href="#" onclick="setCookie('cookie_policy','true',365); return false;">I Agree</a>
-	</div>
-</div>
-```
-
-If you have done it correctly your page should look something like this:
-
-```html
-<html>
-<head>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="cookie_policy_functions.js"></script>
-<link rel="stylesheet" href="cookie_policy_styles.css" />
-
-<title>UK Cookie Policy</title>
-
-</head>
-<body onload="getCookie('cookie_policy');">
-
-<div id="cookie_container">
-  <div class="policy_wrapper">
-		<div class="leftcontainer">
-			We use cookies on this website, by continuing to be here we will take it you agree to us using them.
-		</div>
-		
-		<a class="button" href="#" onclick="setCookie('cookie_policy','true',365); return false;">I Agree</a>
-	</div>
-</div>
-
-</body>
-</html>
 ```
+
+To activate the plugin you will need to add one final snippet into you `$(document).ready();` function. In full you will end up with something that looks like this at the bottom of your page.
+
+```html
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="cookie_policy_functions.js"></script>
+<script>
+$(document).ready(function() {
+	$('body').cookiePolicy();
+});
+</script>
+```
+
+##Options
+
+I have added a few options to aid in customizing the plugin.
+
+```html
+$('body').cookiePolicy({
+	text: '', // Changes the advice text for the warning.
+	btnText: '', // Changes the text on the Agree button.
+	bgColor: '', // Background colour for the popup bar, accepts HEX and RGBA.
+	textColor: '', // Text colour for popup bar, accepts HEX and RGBA.
+	btnColor: '', // Accept button background colour, accepts HEX and RGBA.
+	btnTextColor: '' // Accept button text colour, accepts HEX and RGBA.
+});
+```
+
+If you can think of anything else you'd like as an option, let me know and I'll see if I can add it in.
 
 ##Thanks & Donations
 
-If you find this script so amazing you want to thank me, please feel free to make a small donation on my <a href="http://leejones.me.uk" target="_blank">website</a>.
+Thanks to <a href-"https://github.com/carhartl/jquery-cookie" target="_blank">carhartl</a> for the jQuery Cookie plugin.
+
+If you find this script so amazing you want to thank me, please feel free to make a small donation on my <a href="http://leejones.me.uk#contact" target="_blank">website</a>.
 
 
 ##Licence
