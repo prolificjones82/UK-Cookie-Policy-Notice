@@ -55,7 +55,7 @@ If you can think of anything else you'd like as an option, let me know and I'll 
 
 ##Thanks & Donations
 
-Thanks to <a href-"https://github.com/carhartl/jquery-cookie" target="_blank">carhartl</a> for the jQuery Cookie plugin.
+Thanks to <a href="https://github.com/carhartl/jquery-cookie" target="_blank">carhartl</a> for the jQuery Cookie plugin.
 
 If you find this script so amazing you want to thank me, please feel free to make a small donation on my <a href="http://leejones.me.uk#contact" target="_blank">website</a>.
 
