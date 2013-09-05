@@ -39,6 +39,7 @@ $(document).ready(function() {
 I have added a few options to aid in customizing the plugin.
 
 ```html
+<script>
 $('body').cookiePolicy({
 	text: '', // Changes the advice text for the warning.
 	btnText: '', // Changes the text on the Agree button.
@@ -47,6 +48,7 @@ $('body').cookiePolicy({
 	btnColor: '', // Accept button background colour, accepts HEX and RGBA.
 	btnTextColor: '' // Accept button text colour, accepts HEX and RGBA.
 });
+</script>
 ```
 
 If you can think of anything else you'd like as an option, let me know and I'll see if I can add it in.
