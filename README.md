@@ -1,4 +1,4 @@
-#UK Cookie Policy Notice v2.1.0
+#UK Cookie Policy Notice v2.1.1
 *A simple plugin to notify users you adhere to the UK's cookie policies*
 
 Updated in May 2012, the ICO set out the changes to the cookies law and explains the steps you need to take to ensure you comply. The updated guidance provides additional information around the issue of implied consent:
