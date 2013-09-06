@@ -29,7 +29,7 @@ To activate the plugin you will need to add one final snippet into your `$(docum
 <script src="cookie_policy_functions.js"></script>
 <script>
 $(document).ready(function() {
-	$('body').cookiePolicy();
+	$('body').cookieNotify();
 });
 </script>
 ```
@@ -40,7 +40,7 @@ I have added a few options to aid in customizing the plugin.
 
 ```html
 <script>
-$('body').cookiePolicy({
+$('body').cookieNotify({
 	text: '', // information text
 	btnText: '', // agree button text
 	bgColor: '', // main info bar background colour, accepts HEX or RGBA
